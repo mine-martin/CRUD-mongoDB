@@ -8,27 +8,27 @@ const main = async () => {
   try {
     await client.connect();
 
-    // await createList(client, {
-    //   name: 'test',
-    //   age: 20,
-    //   address: 'seoul',
-    // });
+    await createList(client, {
+      name: 'test',
+      age: 20,
+      address: 'seoul',
+    });
 
-    // await createLists(client, [
-    //   {
-    //     name: 'test1',
-    //     height: 5.8,
-    //     address: 'Thika',
-    //   },
-    //   {
-    //     name: 'mine',
-    //     height: 5.8,
-    //     weight: 60,
-    //     address: 'Nairobi',
-    //   },
-    // ]);
+    await createLists(client, [
+      {
+        name: 'test1',
+        height: 5.8,
+        address: 'Thika',
+      },
+      {
+        name: 'mine',
+        height: 5.8,
+        weight: 60,
+        address: 'Nairobi',
+      },
+    ]);
 
-    // await readListByName(client, 'mine');
+    await readListByName(client, 'mine');
 
     await readListByAge(client, 20);
   } catch (err) {
